@@ -36,5 +36,14 @@ class Kata1
         return Arrays.stream(original.split("(?<=\\s)|(?=\\s+)"))
                 .map(str -> new StringBuilder(str).reverse().toString())
                 .collect(Collectors.joining());
+
+//        Way3
+//        if (original.matches(" *")) {
+//            return original;
+//        } else {
+//            return Stream.of(original.split(" "))
+//                    .map(s -> new StringBuilder(s).reverse().toString())
+//                    .collect(Collectors.joining(" "));
+//        }
     }
 }
